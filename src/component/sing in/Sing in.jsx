@@ -23,7 +23,7 @@ const Singin = () => {
           </span>
           <form>
             <div className="py-4">
-              <span className="mb-2 text-md">Email </span>
+              <span className="mb-2 text-md">Email</span>
               <input 
                 type="text"
                 className="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
@@ -42,7 +42,7 @@ const Singin = () => {
             </div>
             <div className="flex justify-between w-full py-4">
               <div className="mr-24">
-                <input type="checkbox" name="ch" id="ch" className="mr-2" />
+                <input type="checkbox" name="ch" id="ch" className="mr-2"/>
                 <span className="text-md">Remember for 30 days</span>
               </div>
               <span className="font-bold text-md">Forgot password</span>

@@ -5,6 +5,7 @@ import Signin from "./component/sing in/Sing in";
 import Navbar from './Dashboard/navbar/Navbar';
 import SideNavbar from './Dashboard/side navbar/SideNavbar';
 import Banner from './Banner/Banner';
+import Layout from './Layout/Layout';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/sidenavbar" element={<SideNavbar />} />
           <Route path="/navbar" element={<Navbar />} />
           <Route path='/banner' element={<Banner/>}/>
+          <Route path='/layout' element={<Layout/>}/>
         </Routes>
       </div>
     </Router>

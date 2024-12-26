@@ -1,21 +1,81 @@
-import React from 'react'
-import Navbar from '../Dashboard/navbar/Navbar';
+import React from "react";
+import { FaApple, FaGoogle, FaFacebook } from "react-icons/fa";
+import { TiVendorMicrosoft } from "react-icons/ti";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 function Banner() {
+  const cart = [
+    {
+      name: "Apple",
+      brandIcons: <FaApple className="w-8 h-8 text-gray-800" />, 
+      totalReturn: "-1.10%",
+      arrow: "down",
+      graph: "stock-market-logo.png",
+    },
+    {
+      name: "Google",
+      brandIcons: <FaGoogle className="w-8 h-8 text-gray-800" />,
+      totalReturn: "+0.04%",
+      arrow: "up",
+      graph: "stock-market-logo.png",
+    },
+    {
+      name: "Facebook",
+      brandIcons: <FaFacebook className="w-8 h-8 text-gray-800" />, 
+      totalReturn: "-0.10%",
+      arrow: "down",
+      graph: "stock-market-logo.png",
+    },
+    {
+      name: "Microsoft",
+      brandIcons: <TiVendorMicrosoft className="w-8 h-8 text-gray-800" />,
+      totalReturn: "+0.85%",
+      arrow: "up",
+      graph: "stock-market-logo.png",
+    },
+  ];
+
   return (
-    <>
-    <div className='flex p-1 justify-center space-x-10 w-full'>
-    <div className="mt-4 h-32 w-96 p-1">
-        <img 
-            src="stock-market-img.jpg" 
-            alt="Stock Market Banner" 
-            className="w-full h-auto"
-        />
+    <div className="min-h-screen bg-gray-200 flex items-start justify-center pt-10 rounded-xl">
+      <div className="flex flex-wrap gap-10 w-full max-w-4xl">
+        {cart.map((data, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl p-4 shadow-lg w-48 h-40 flex flex-col justify-between"
+          >
+            <div className="flex items-center gap-3">
+              {data.brandIcons}
+              <span className="text-black text-lg font-medium">{data.name}</span>
+              <img
+                src={data.graph}
+                alt={`${data.name} Stock Graph`}
+                className="w-12 h-8 ml-auto"
+              />
+            </div>
+            <div className="mt-2">
+              <h2 className="text-sm text-gray-600 font-medium">Balance:</h2>
+              <p className="text-blue-700 font-bold text-lg">$24,359</p>
+            </div>
+            <div className="mt-2 flex items-center gap-2 text-sm text-gray-500">
+              <span>Total Return:</span>
+              <span
+                className={`font-bold ${
+                  data.arrow === "down" ? "text-red-500" : "text-green-500"
+                }`}
+              >
+                {data.totalReturn}
+              </span>
+              {data.arrow === "down" ? (
+                <FaArrowDown className="text-red-500 w-4 h-4" />
+              ) : (
+                <FaArrowUp className="text-green-500 w-4 h-4" />
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-    </div>
-    <Navbar/>
-    </>
-  )
+  );
 }
 
 export default Banner;
