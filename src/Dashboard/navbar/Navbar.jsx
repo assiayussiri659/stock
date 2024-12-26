@@ -7,7 +7,7 @@ import { FaGripLinesVertical } from "react-icons/fa";
 const Navbar = () => {
     return (
         <header className="p-4 bg-blue-700 shadow-md flex justify-between items-center rounded-sm">
-            <div className="max-w-xl hidden md:flex gap-2 border p-1 rounded-md">
+            <div className="max-w-xl hidden md:flex gap-2 border p-1 rounded-sm">
                 <FaSearch className="h-5 w-5 text-white" />
                 <input
                     type="text"
@@ -18,9 +18,9 @@ const Navbar = () => {
             </div>
             <FaBars className="w-6 h-6 text-white md:hidden" />
             <div className="flex items-center space-x-8">
-                <MdOutlineMailOutline className="w-6 h-6 text-white" />
-                <IoNotifications className="w-6 h-6 text-white" />
-                <FaGripLinesVertical className="w-6 h-6 text-white"/>
+                <MdOutlineMailOutline className="w-6 h-6 text-white hidden md:flex" />
+                <IoNotifications className="w-6 h-6 text-white hidden md:flex" />
+                <FaGripLinesVertical className="w-6 h-6 text-white hidden md:flex"/>
                 <div className="relative">
                     <button
                         type="button"

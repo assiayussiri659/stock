@@ -1,6 +1,5 @@
 import React from "react";
-import { FaApple, FaGoogle, FaFacebook } from "react-icons/fa";
-import { TiVendorMicrosoft } from "react-icons/ti";
+import { FaApple } from "react-icons/fa";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 function Banner() {
@@ -14,21 +13,21 @@ function Banner() {
     },
     {
       name: "Google",
-      brandIcons: <FaGoogle className="w-8 h-8 text-gray-800" />,
+      brandIcons: <img src="google.png" alt=""  className="w-8 h-8"/>,
       totalReturn: "+0.04%",
       arrow: "up",
       graph: "stock-market-logo.png",
     },
     {
       name: "Facebook",
-      brandIcons: <FaFacebook className="w-8 h-8 text-gray-800" />, 
+      brandIcons: <img src="facebook.png" alt="" className="w-8 h-8"/>, 
       totalReturn: "-0.10%",
       arrow: "down",
       graph: "stock-market-logo.png",
     },
     {
       name: "Microsoft",
-      brandIcons: <TiVendorMicrosoft className="w-8 h-8 text-gray-800" />,
+      brandIcons:  <img src="microsoft.png" alt="" className="w-8 h-8"/> ,
       totalReturn: "+0.85%",
       arrow: "up",
       graph: "stock-market-logo.png",
@@ -36,6 +35,7 @@ function Banner() {
   ];
 
   return (
+  
     <div className="min-h-screen bg-gray-200 flex items-start justify-center pt-10 rounded-xl">
       <div className="flex flex-wrap gap-10 w-full max-w-4xl">
         {cart.map((data, index) => (
@@ -73,6 +73,13 @@ function Banner() {
             </div>
           </div>
         ))}
+        <div className='flex flex-wrap gap-10 w-full max-w-4xl'>
+            <div className='bg-white rounded-xl p-4 shadow-lg w-96 h-40 flex flex-col justify-between'>
+            </div>
+        </div>
+          <div className="bg-white rounded-xl p-4 shadow-lg w-96 h-40 flex flex-col justify-between">
+
+          </div>
       </div>
     </div>
   );

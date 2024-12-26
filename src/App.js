@@ -6,6 +6,7 @@ import Navbar from './Dashboard/navbar/Navbar';
 import SideNavbar from './Dashboard/side navbar/SideNavbar';
 import Banner from './Banner/Banner';
 import Layout from './Layout/Layout';
+import Footer from './Footer/Footer'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/navbar" element={<Navbar />} />
           <Route path='/banner' element={<Banner/>}/>
           <Route path='/layout' element={<Layout/>}/>
+          <Route path='/footer' element={<Footer/>}/>
         </Routes>
       </div>
     </Router>
